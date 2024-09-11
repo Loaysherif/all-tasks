@@ -1,0 +1,53 @@
+Extends:
+void main() {
+  Rectangle rec1 = new Rectangle();
+ rec1.length=5;
+   rec1.width=3;
+  rec1.color="Red";
+  rec1.printData();
+  rec1.calculateArea();
+  
+  
+}
+ class Shape{
+   String color = "";
+    int length = 0; 
+  int width = 0;
+  void calculateArea(){
+    int area= length*width;
+    print(area);
+  }
+ }
+class Rectangle extends Shape{
+ 
+  void printData(){
+    print("length: $length  width: $width  color: $color" );
+  }
+}
+
+
+Mixin:
+void main() {
+  var leopard = Leopard("Bolt", 58, "black and white");
+  leopard.printData(); // Calling the printData method
+}
+
+abstract class Animal {
+  String color;
+  String name;
+  int speed = 0;
+
+  Animal(this.name, this.speed, this.color);
+
+  void printData(); // Abstract method
+}
+
+mixin PrintData on Animal {
+  @override
+  void printData() => print("color: $color, \n name: $name, \n speed: $speed");
+}
+
+class Leopard extends Animal with PrintData {
+  Leopard(String name, int speed , String color) : super(name, speed,color);
+}
+

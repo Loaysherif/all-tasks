@@ -1,0 +1,27 @@
+Mixin:
+
+
+void main() {
+  var leopard = Leopard("Bolt", 58, "black and white");
+  leopard.printData(); // Calling the printData method
+}
+
+abstract class Animal {
+  String color;
+  String name;
+  int speed = 0;
+
+  Animal(this.name, this.speed, this.color);
+
+  void printData(); // Abstract method
+}
+
+mixin PrintData on Animal {
+  @override
+  void printData() => print("color: $color, \n name: $name, \n speed: $speed");
+}
+
+class Leopard extends Animal with PrintData {
+  Leopard(String name, int speed , String color) : super(name, speed,color);
+}
+
