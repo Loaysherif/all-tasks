@@ -1,0 +1,60 @@
+<!-- res/layout/item_album.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:padding="8dp"
+    android:elevation="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Album Title -->
+        <TextView
+            android:id="@+id/album_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album Title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Album ID -->
+        <TextView
+            android:id="@+id/album_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album ID: 1"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- User ID -->
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User ID: 1"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
